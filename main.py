@@ -3,27 +3,27 @@
 #TP2
 import random
 def jeu():
-    bornes=str(input('Voulez vous choisir les limites du nombres mystere? (y/n)'))
+    bornes=str(input('Voulez vous choisir les limites du nombres mystere? (y/n)'))   #limites
     if bornes == ('y'):
         borne_minimale=int(input('Quelle sera le minimum?'))
         borne_maximale=int(input('Quelle sera le maximum?'))
-    chiffre_aléatoire = random.randint(borne_minimale,borne_maximale)
+    chiffre_aléatoire = random.randint(borne_minimale,borne_maximale)    #definir chiffre_aleatoire
     print('Lordinateur a choisi un nombre, essayez de le deviner.')
     nb_essai=1
     boucle_jeu=True
     while True:
         essai=int(input('Entrez votre premier essai:'))
-        if essai>chiffre_aléatoire:
+        if essai>chiffre_aléatoire:          #si trop grand
             print('Le nombre est plus petit')
             nb_essai=nb_essai+1
             boucle_jeu + True
-        elif essai < chiffre_aléatoire:
+        elif essai < chiffre_aléatoire:       #si trop petit
             print('le nombre est plus grand')
             nb_essai=nb_essai+1
             boucle_jeu = True
-        elif essai == chiffre_aléatoire:
+        elif essai == chiffre_aléatoire:       #si le nombre est trouvé
             print('Bravo! Vous avez trouvez en',nb_essai,'essais,Bravo!')
-            rejouer=str(input('Voulez vous réssayer? (y/n)'))
+            rejouer=str(input('Voulez vous réssayer? (y/n)'))    #pour ressayer
             if quit==('y'):
                 break
             else:
